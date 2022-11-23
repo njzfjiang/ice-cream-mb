@@ -1,7 +1,13 @@
 # Ice Cream MB
 
+Ice Cream MB is an API which allows users to find the best ice cream shops in Manitoba. Ice cream shops can be retrieved based on location, and their popularity and available flavours can be found.
+
 ## Get shops near a certain location
-Endpoint: `POST /api/shops`
+
+Retrieve all ice cream shops within a given radius of a given coordinate. The result is a JSON array of shops. Each element has the name of the shop, its latitude and its longitude.
+
+Endpoint: `GET /icecream/shops`
+
 Parameters:
 * `lat`: Latitude
 	* required
@@ -9,6 +15,7 @@ Parameters:
 	* required
 * `rad`: Radius to get shops within
 	* optional, defaults to 1km
+
 Resources:
 ```json
 [
